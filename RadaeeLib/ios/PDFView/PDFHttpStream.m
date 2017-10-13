@@ -40,6 +40,7 @@
 -(void)init_length
 {
     NSMutableURLRequest* urlRequest = [NSMutableURLRequest requestWithURL:m_url cachePolicy:NSURLRequestReloadRevalidatingCacheData timeoutInterval:60.0];
+	[urlRequest setHTTPMethod:@"HEAD"];
 	NSHTTPURLResponse *lenResponse;
 	
     [urlRequest setValue:@"Keep-Alive" forHTTPHeaderField:@"Close"];
